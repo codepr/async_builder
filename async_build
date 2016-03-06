@@ -52,6 +52,11 @@ sub compile_tex {
 
 $_->join() foreach(@threads);
 
+if ( $total == 0 ) {
+    print "\n\e[1m [!] No .tex file found\e[0m\n\n";
+    exit 1;
+}
+
 printf "\n\e[1m [*] Successfully compiled %d out of %d. Completed...[%d%%]\e[0m\n", $count, $total, ($count / $total) * 100;
 system('cd build && rm -f *.log *.aux *.out *.lof *.lot *.soc *.toc'); # remove all bloat files
 
