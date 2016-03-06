@@ -10,6 +10,6 @@ async_build path/to/.tex
 
 If no arguments are specified it build all .tex recursively found on current directory.
 
-# License
+## License
 
 See the [LICENSE](LICENSE) file for license rights and limitations (MIT).
